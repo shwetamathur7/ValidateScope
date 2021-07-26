@@ -8,7 +8,8 @@ _API is called only if user has right scopes_
                 clientApiCallResult = callClientService(result.accessToken());
             else
             httpResponse.sendError(HttpServletResponse.SC_UNAUTHORIZED,
-                    "You are not authorized to access the application");```
+                    "You are not authorized to access the application");
+  ```
 
 
 ##To verify the User's scope 
@@ -18,7 +19,7 @@ _API is called only if user has right scopes_
 3. If user has right scope , then only call the application otherwise prompt User is unauthorized.
  
 
-#To validate the changes, Remove API permission(scope = access_as_user) from Azure Portal and hit the application.
+**To validate the changes, Remove API permission(scope = access_as_user) from Azure Portal and hit the application.**
 
 
 _Another way to verify scope in spring boot is using @Authorization annotation_
