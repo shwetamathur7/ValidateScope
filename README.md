@@ -19,9 +19,14 @@ _API is called only if user has right scopes_
 3. If user has right scope , then only call the application otherwise prompt User is unauthorized.
  
 
-**To validate the changes, Remove API permission(scope = access_as_user) from Azure Portal and hit the application.**
+**To validate the changes** 
 
+-Remove API permission(scope = access_as_user) from Azure Portal and hit the application.**
+
+-User should get 401-Unauthorized error.
 
 _Another way to verify scope in spring boot is using @Authorization annotation_
-Define the scope and roles in application file and verify the scope if authorization scheme is OAuth2 using @RolesAllowed and scope 
-to authorize the resource in the application.
+
+-Define the scope and roles in application file
+
+-@RolesAllowed and AuthorizationScope has been called in controller class to access the resource.
